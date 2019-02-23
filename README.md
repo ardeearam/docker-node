@@ -21,6 +21,10 @@ docker run aaram/node
 
 docker run aaram/node -e "console.log('Hello world');"
 # Hello world
+
+# For some Node.js executable at ~/test.js
+docker run -v ~/test.js:/tmp/test.js aaram/node /tmp/test.js 
+# Test.js succesfully executed.
 ```
 
 # License
