@@ -1,8 +1,8 @@
 # Stack
 This Dockerfile supports the following stack:
-Ubuntu 	18.04 
-NVM 	v0.34.0
-Node.js 11.10.0
+* Ubuntu 	18.04 
+* NVM 	v0.34.0
+* Node.js 11.10.0
 
 
 # Building
