@@ -4,6 +4,8 @@ This Dockerfile supports the following stack:
 * NVM 	v0.34.0
 * Node.js 11.10.0
 
+Feel free to fork this repo and modify the versions of Ubuntu, NVM, and Node.js to whatever you need them to be.
+
 
 # Building
 ```
