@@ -17,7 +17,7 @@ docker build . -t aaram/node
 docker run aaram/node
 # v11.10.0
 
-docker run -it aaram/node -e "console.log('Hello world');"
+docker run aaram/node -e "console.log('Hello world');"
 # Hello world
 ```
 
