@@ -8,27 +8,27 @@ Feel free to fork this repo and modify the versions of Ubuntu, NVM, and Node.js 
 
 
 # Building
-```
+```console
 git clone git@github.com:ardeearam/docker-node.git
 cd docker-node
 docker build . -t aaram/node
 ```
 
 # Use as docker executable
-```
+```console
 $ docker run aaram/node
-# v11.10.0
+v11.10.0
 
 $ docker run aaram/node -e "console.log('Hello world');"
-# Hello world
+Hello world
 
 # For some Node.js executable at ~/test.js
 $ docker run -v ~/test.js:/tmp/test.js aaram/node /tmp/test.js 
-# Test.js succesfully executed.
+Test.js succesfully executed.
 ```
 
 # Use as docker base image 
-```
+```dockerfile
 # In Dockerfile. App is in same directory as Dockerfile file.
 
 FROM aaram/node
