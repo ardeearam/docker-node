@@ -14,17 +14,32 @@ cd docker-node
 docker build . -t aaram/node
 ```
 
-# Run as docker executable
+# Use as docker executable
 ```
-docker run aaram/node
+$ docker run aaram/node
 # v11.10.0
 
-docker run aaram/node -e "console.log('Hello world');"
+$ docker run aaram/node -e "console.log('Hello world');"
 # Hello world
 
 # For some Node.js executable at ~/test.js
-docker run -v ~/test.js:/tmp/test.js aaram/node /tmp/test.js 
+$ docker run -v ~/test.js:/tmp/test.js aaram/node /tmp/test.js 
 # Test.js succesfully executed.
+```
+
+# Use as docker base image 
+```
+# In Dockerfile. App is in same directory as Dockerfile file.
+
+FROM aaram/node
+
+WORKDIR /home/app
+COPY . /home/app
+
+RUN /tmp/runner.sh npm install
+
+ENTRYPOINT ["/tmp/runner.sh", "npm", "start"]
+
 ```
 
 # License

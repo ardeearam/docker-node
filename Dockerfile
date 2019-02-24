@@ -21,6 +21,7 @@ RUN source /root/.nvm/nvm.sh && \
     nvm install $NODE_VERSION && \
     nvm use $NODE_VERSION;
 
+# Create runner wrapper
 COPY runner.sh /tmp/runner.sh
 RUN chmod +x /tmp/runner.sh
 
