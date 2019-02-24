@@ -21,9 +21,9 @@ RUN source /root/.nvm/nvm.sh && \
     nvm install $NODE_VERSION && \
     nvm use $NODE_VERSION;
 
-COPY wrapper.sh /tmp/wrapper.sh
-RUN chmod +x /tmp/wrapper.sh
+COPY runner.sh /tmp/runner.sh
+RUN chmod +x /tmp/runner.sh
 
 
-ENTRYPOINT ["/tmp/wrapper.sh", "node"]
+ENTRYPOINT ["/tmp/runner.sh", "node"]
 CMD ["-v"]
